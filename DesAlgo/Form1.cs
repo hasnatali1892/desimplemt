@@ -19,6 +19,7 @@ namespace DesAlgo
         private void button1_Click(object sender, EventArgs e)
         {
             label1.Text = "hasnat ali";
+            label2.Text = "Tahir Jutt";
         }
 
     }
