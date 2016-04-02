@@ -18,20 +18,9 @@ namespace DesAlgo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox2.Text = tobin(textBox1.Text);
+            label1.Text = "hasnat ali";
+            label2.Text = "Tahir Jutt";
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-        public string tobin(string input) {
-            StringBuilder sb = new StringBuilder();
-            foreach (char L in input.ToCharArray())
-            {
-                sb.Append(Convert.ToString(L, 2).PadLeft(8, '0'));
-}
-            return sb.ToString();
-        }
     }
 }
