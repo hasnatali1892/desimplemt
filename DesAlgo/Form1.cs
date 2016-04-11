@@ -18,7 +18,6 @@ namespace DesAlgo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
             textBox2.Text = tobin(textBox1.Text);
         }
 
@@ -26,6 +25,7 @@ namespace DesAlgo
         {
 
         }
+
         public string tobin(string input)
         {
             StringBuilder sb = new StringBuilder();
@@ -35,6 +35,5 @@ namespace DesAlgo
             }
             return sb.ToString();
         }
-
     }
 }

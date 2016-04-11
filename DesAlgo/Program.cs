@@ -16,7 +16,7 @@ namespace DesAlgo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            GUI.Class1 x = new GUI.Class1();
+            //GUI.Class1 x = new GUI.Class1();
         }
     }
 }
