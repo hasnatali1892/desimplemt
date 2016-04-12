@@ -37,6 +37,7 @@
             this.textBoxKey = new System.Windows.Forms.TextBox();
             this.epKey = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.butKeyGenerator = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.epKey)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
@@ -99,11 +100,22 @@
             // 
             this.errorProvider2.ContainerControl = this;
             // 
+            // butKeyGenerator
+            // 
+            this.butKeyGenerator.Location = new System.Drawing.Point(90, 216);
+            this.butKeyGenerator.Name = "butKeyGenerator";
+            this.butKeyGenerator.Size = new System.Drawing.Size(75, 23);
+            this.butKeyGenerator.TabIndex = 6;
+            this.butKeyGenerator.Text = "KeyGenerator";
+            this.butKeyGenerator.UseVisualStyleBackColor = true;
+            this.butKeyGenerator.Click += new System.EventHandler(this.butKeyGenerator_Click);
+            // 
             // Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 357);
+            this.Controls.Add(this.butKeyGenerator);
             this.Controls.Add(this.textBoxKey);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -130,6 +142,7 @@
         private System.Windows.Forms.TextBox textBoxKey;
         private System.Windows.Forms.ErrorProvider epKey;
         private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.Button butKeyGenerator;
     }
 }
 

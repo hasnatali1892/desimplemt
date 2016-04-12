@@ -30,5 +30,16 @@ namespace DesAlgo
         {
 
         }
+
+        private void butKeyGenerator_Click(object sender, EventArgs e)
+        {
+            String Key = CommonFunctions.tobinary(textBoxKey.Text);
+            KeyGenerator k = new KeyGenerator();
+            //k.leftCirculerShift(Key);
+            //k.permutationChoice1(Key);
+            k.keyGeneration(Key);
+        }
+
+       
     }
 }
