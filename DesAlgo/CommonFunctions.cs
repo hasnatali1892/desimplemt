@@ -7,7 +7,7 @@ namespace DesAlgo
 {
     class CommonFunctions
     {
-        public string tobin(string input)
+        public static string tobinary(string input)
         {
             StringBuilder sb = new StringBuilder();
             foreach (char L in input.ToCharArray())
