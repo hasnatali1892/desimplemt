@@ -31,6 +31,7 @@ namespace DesAlgo
 
         private void btnTextEncrypt_Click(object sender, EventArgs e)
         {
+            //ProcessDES des = new ProcessDES();
             if (!KeyCheck(txtKey.Text))
             {
                 return;

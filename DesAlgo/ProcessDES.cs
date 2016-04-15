@@ -1,4 +1,4 @@
-using System;
+Ôªøusing System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,7 +11,7 @@ namespace SimpleCryptographer.DES
         //    this.IncrementProgress = IncrementProgress;
         //    this.InitProgress = InitProgress;
         //}
-        
+
         //#region Event for progress bar
         //public event Form1.ProgressInitHandler InitProgress;
         //public event Form1.ProgressEventHandler IncrementProgress;
@@ -33,7 +33,7 @@ namespace SimpleCryptographer.DES
         public override/*static*/ string EncryptionStart(string text, string key, bool IsTextBinary)
         {
             #region Get 16 sub-keys using key
-                        
+
             string hex_key = this.FromTextToHex(key);
             string binary_key = this.FromHexToBinary(hex_key);
             string key_plus = this.DoPermutation(binary_key, DESData.pc_1);
@@ -93,7 +93,7 @@ namespace SimpleCryptographer.DES
         }
         #endregion
 
-        #region Decryption Process 
+        #region Decryption Process
         public override/*static*/ string DecryptionStart(string text, string key, bool IsTextBinary)
         {
             #region Get 16 sub-keys using key
@@ -182,7 +182,7 @@ namespace SimpleCryptographer.DES
             #endregion
         }
         #endregion
-        
+
         #region Check a string whether Korean or not. - not used in this program.
         public /*static*/ bool IsKorean(char word)
         {
@@ -228,7 +228,7 @@ namespace SimpleCryptographer.DES
             return text.ToString();
         }
 
-        public /*static*/ string FromBinaryToText(string binarystring)        
+        public /*static*/ string FromBinaryToText(string binarystring)
         {
             StringBuilder text = new StringBuilder(binarystring.Length / 8);
 
@@ -242,7 +242,7 @@ namespace SimpleCryptographer.DES
             return text.ToString();
         }
         #endregion
-        
+
         #region Set a length of text to multiple of 64 bits
         public string setTextMutipleOf64Bits(string text)
         {
@@ -322,7 +322,7 @@ namespace SimpleCryptographer.DES
             {
                 if (binary[i] == '1')
                 {
-                    value += (byte)factor;                    
+                    value += (byte)factor;
                 }
 
                 factor /= 2;
@@ -345,7 +345,7 @@ namespace SimpleCryptographer.DES
 
                     int factor = 8;
 
-                    for(int j=0; j<4; j++)
+                    for (int j = 0; j < 4; j++)
                     {
                         if (hex >= factor)
                         {
@@ -381,7 +381,7 @@ namespace SimpleCryptographer.DES
 
             return PermutatedText.ToString();
         }
-        
+
         //For SBoxes Transformation
         public string DoPermutation(string text, int[,] order)
         {
@@ -393,7 +393,7 @@ namespace SimpleCryptographer.DES
             PermutatedText = ProcessDES.FromDeciamlToBinary(order[rowIndex, colIndex]);
 
             return PermutatedText;
-        }        
+        }
         #endregion
 
         #region Divide a text to left and right halves
@@ -404,7 +404,7 @@ namespace SimpleCryptographer.DES
 
         public string SetRightHalvesKey(string text)
         {
-            return this.SetHalvesKey(false, text);       
+            return this.SetHalvesKey(false, text);
         }
 
         public string SetHalvesKey(bool IsLeft, string text)
@@ -454,7 +454,7 @@ namespace SimpleCryptographer.DES
         }
         #endregion
 
-        #region KeyµÈ¿ª ±∏«œ¥¬ ∏ﬁº≠µÂ - Get all of keys
+        #region Key¬µ√©√Ä¬ª ¬±¬∏√á√è¬¥√Ç ¬∏√û¬º¬≠¬µ√• - Get all of keys
         public Keys SetAllKeys(string C0, string D0)
         {
             Keys keys = new Keys();
@@ -466,7 +466,7 @@ namespace SimpleCryptographer.DES
                 keys.Cn[i] = this.LeftShift(keys.Cn[i - 1], DESData.nrOfShifts[i]);
                 keys.Dn[i] = this.LeftShift(keys.Dn[i - 1], DESData.nrOfShifts[i]);
                 keys.Kn[i - 1] = this.DoPermutation(keys.Cn[i] + keys.Dn[i], DESData.pc_2);
-            }          
+            }
 
             return keys;
         }
@@ -512,7 +512,7 @@ namespace SimpleCryptographer.DES
 
         public /*static*/ bool IsEnough(int i, bool IsReverse)
         {
-            return (IsReverse == false) ? i < 16 : i >= 0;            
+            return (IsReverse == false) ? i < 16 : i >= 0;
         }
         #endregion
 
@@ -556,7 +556,7 @@ namespace SimpleCryptographer.DES
             return TransformedText.ToString();
         }
         #endregion
-         
+
         #region E Selection
         public string E_Selection(string Rn_1)
         {
