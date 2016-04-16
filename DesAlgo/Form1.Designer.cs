@@ -83,7 +83,7 @@
             // 
             this.txtKey.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtKey.Location = new System.Drawing.Point(45, 135);
-            this.txtKey.MaxLength = 16;
+            this.txtKey.MaxLength = 8;
             this.txtKey.Name = "txtKey";
             this.txtKey.Size = new System.Drawing.Size(340, 20);
             this.txtKey.TabIndex = 17;

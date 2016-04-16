@@ -18,13 +18,13 @@ namespace DesAlgo
 
         private bool KeyCheck(string key)
         {
-            if (key.Length == 16)
+            if (key.Length == 8)
             {
                 return true;
             }
             else
             {
-                MessageBox.Show("The key is must be 16-HexDecimal Length for DES algorithm");
+                MessageBox.Show("The key is must be 8-HexDecimal Length for DES algorithm");
                 return false;
             }
         }
@@ -42,6 +42,7 @@ namespace DesAlgo
         {
             if (!KeyCheck(txtKey.Text))
             {
+               
                 return;
             }
         }
